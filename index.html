@@ -1,130 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abhyudaya Celestial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; background-color: #000; color: #fff; }
-    header { display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #111; }
-    nav ul { display: flex; gap: 30px; list-style: none; }
-    nav a { color: #fff; text-decoration: none; font-weight: 500; }
-    .hero-slider { height: 60vh; background: url('banner1.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: bold; }
-    section { padding: 60px 20px; max-width: 1200px; margin: auto; }
-    .about { display: flex; gap: 40px; align-items: center; }
-    .about img { width: 50%; border-radius: 10px; }
-    .amenities { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 20px; text-align: center; }
-    .floor-plan { display: flex; gap: 40px; margin-top: 30px; }
-    .floor-plan img { width: 100%; border: 1px solid #555; border-radius: 8px; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-    .location { display: flex; gap: 30px; }
-    .location-list { flex: 1; }
-    .location-map { flex: 2; }
-    iframe { width: 100%; height: 300px; border: none; }
-    .contact-form input { display: block; width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
-    .contact-form button { background-color: gold; padding: 10px 20px; border: none; color: black; font-weight: bold; border-radius: 5px; cursor: pointer; }
-    footer { background: #111; padding: 30px; text-align: center; }
-    .social-icons a { margin: 0 10px; color: gold; font-size: 20px; text-decoration: none; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('https://via.placeholder.com/1920x800') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .highlights, .gallery, .floorplans, .location, .contact {
+      margin-top: 40px;
+    }
+
+    .gallery img, .floorplans img {
+      width: 100%;
+      max-width: 350px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .map {
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #0066cc;
+      color: white;
+      font-weight: bold;
+      border: none;
+    }
   </style>
 </head>
+
 <body>
   <header>
-    <div><img src="logo.png" alt="Logo" height="40"></div>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#amenities">Amenities</a></li>
-        <li><a href="#floorplan">Floor Plan</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#location">Location</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div><a href="tel:+91XXXXXXXXXX" style="color:gold">+91-XXXXXXXXXX</a></div>
+    <div>
+      <h1>Abhyudaya Celestial</h1>
+      <p>Premium 3 & 3BHK + Servant Apartments Starting at ₹1.57 Cr in Shalimar One World, Lucknow</p>
+    </div>
   </header>
 
-  <div class="hero-slider">
-    Your Dream Home Awaits
-  </div>
-
-  <section id="about" class="about">
-    <img src="about.jpg" alt="About Image">
-    <div>
-      <h2>About Us</h2>
-      <p>Abhyudaya Celestial is a luxury residential project located in Shalimar One World, offering premium 3BHK & 3BHK + Servant apartments with world-class amenities.</p>
-    </div>
+  <section class="highlights">
+    <h2>Project Highlights</h2>
+    <ul>
+      <li>Luxurious 3 BHK & 3 BHK + Servant units</li>
+      <li>Prime location in Shalimar One World Township</li>
+      <li>Fully Gated Society with Modern Amenities</li>
+      <li>Starting Price: ₹1.57 Cr</li>
+      <li>RERA Approved</li>
+    </ul>
   </section>
 
-  <section id="amenities">
-    <h2>Amenities</h2>
-    <div class="amenities">
-      <div><img src="gym.png" alt="Gym" /><p>Gym</p></div>
-      <div><img src="pool.png" alt="Pool" /><p>Swimming Pool</p></div>
-      <div><img src="park.png" alt="Park" /><p>Green Park</p></div>
-      <div><img src="security.png" alt="Security" /><p>24x7 Security</p></div>
-    </div>
-  </section>
-
-  <section id="floorplan">
-    <h2>Floor Plans</h2>
-    <div class="floor-plan">
-      <div>
-        <img src="3bhk.jpg" alt="3BHK Plan">
-        <p>Carpet Area: 1450 sq.ft<br>Built-up Area: 1750 sq.ft</p>
-        <center><button onclick="document.getElementById('contact').scrollIntoView()">Download Brochure</button></center>
-      </div>
-      <div>
-        <img src="3bhk-servant.jpg" alt="3BHK+Servant Plan">
-        <p>Carpet Area: 1650 sq.ft<br>Built-up Area: 1950 sq.ft</p>
-        <center><button onclick="document.getElementById('contact').scrollIntoView()">Download Brochure</button></center>
-      </div>
-    </div>
-  </section>
-
-  <section id="gallery">
+  <section class="gallery">
     <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="site1.jpg" alt="Site Image">
-      <img src="site2.jpg" alt="Site Image">
-      <img src="site3.jpg" alt="Site Image">
-      <img src="site4.jpg" alt="Site Image">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <img src="https://via.placeholder.com/350x250" alt="Gallery Image 1">
+      <img src="https://via.placeholder.com/350x250" alt="Gallery Image 2">
+      <img src="https://via.placeholder.com/350x250" alt="Gallery Image 3">
     </div>
   </section>
 
-  <section id="location" class="location">
-    <div class="location-list">
-      <h3>Nearby Locations</h3>
-      <p>Airport – 15 mins</p>
-      <p>Hazratganj – 10 mins</p>
-      <p>High Court – 5 mins</p>
-      <p>Ram Manohar Lohia Hospital – 2 mins</p>
-    </div>
-    <div class="location-map">
-      <iframe src="https://www.google.com/maps/embed?..." allowfullscreen></iframe>
+  <section class="floorplans">
+    <h2>Floor Plans</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <img src="https://via.placeholder.com/350x300" alt="Floor Plan 1">
+      <img src="https://via.placeholder.com/350x300" alt="Floor Plan 2">
     </div>
   </section>
 
-  <section id="contact">
+  <section class="location">
+    <h2>Location Map</h2>
+    <iframe class="map" src="https://maps.google.com/maps?q=shalimar%20one%20world%20lucknow&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+  </section>
+
+  <section class="contact">
     <h2>Contact Us</h2>
-    <form class="contact-form" action="mailto:info@abhyudayacelestial.in" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="text" name="city" placeholder="City" required>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <textarea placeholder="Your Message" rows="4" required></textarea>
       <button type="submit">Submit</button>
     </form>
   </section>
-
-  <footer>
-    <p>RERA No: UPRERAPRJ000000 | © 2025 Abhyudaya Celestial</p>
-    <p>Call: +91-XXXXXXXXXX | Email: info@abhyudayacelestial.in</p>
-    <div class="social-icons">
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-      <a href="#">Twitter</a>
-      <a href="#">LinkedIn</a>
-    </div>
-  </footer>
 </body>
+
 </html>
